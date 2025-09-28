@@ -1,0 +1,10 @@
+{
+    "project_name": "HelloWorld-MPI",
+    "project_description": "C application with MPI support",
+    "author_name": "Matteo Ranzi",
+    "local_operating_system": ["MacOS", "Linux", "Windows"],
+    "cxx_standard": "11",
+    "unitn_username": "matteo.ranzi",
+    "remote_project_path": ["/Exercises", "/Projects", "[WRITE_CUSTOM_PATH]"],
+    "remote_toolchain_name": "UNITN HPC"
+}
