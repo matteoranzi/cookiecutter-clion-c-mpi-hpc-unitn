@@ -7,8 +7,6 @@ cd "$WORKING_DIRECTORY" || exit
 source ./pbs/job.config
 
 #---------------------------------------------------------------------------------------------------
-#PBS -o /dev/null
-#PBS -e /dev/null
 job_id="${PBS_JOBID%%.*}" # numeric job id
 
 job_log_path="pbs/logs/${job_id}"
@@ -20,9 +18,8 @@ stderr_file="./${job_log_path}/err.log"
 exec 1> "$stdout_file" 2> "$stderr_file"
 #---------------------------------------------------------------------------------------------------
 
+echo "${job_id}" > ./pbs/logs/last_job/job_id
+
 module load mpich-3.2
 mpirun.actual -n ${MPI_PROCESSES} "./cmake-build-debug-remote/{{ cookiecutter.project_name }}"
 mpi_exit_status=$?
-
-echo "${job_id}" > ./pbs/logs/last_job/job_id
-
