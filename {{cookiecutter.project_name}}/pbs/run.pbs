@@ -21,5 +21,4 @@ exec 1> "$stdout_file" 2> "$stderr_file"
 echo "${job_id}" > ./pbs/logs/last_job/job_id
 
 module load mpich-3.2
-mpirun.actual -n ${MPI_PROCESSES} "./cmake-build-debug-remote/{{ cookiecutter.project_name }}"
-mpi_exit_status=$?
+mpirun.actual -n "${MPI_PROCESSES}" "./cmake-build-debug-remote/{{ cookiecutter.project_name }}"
