@@ -11,3 +11,4 @@ echo "JOB_ID: ${job_id}"
 numeric_job_id="${job_id%%.*}"
 mkdir -p "./pbs/logs/${numeric_job_id}"
 cp "./pbs/job.config" "./pbs/logs/${numeric_job_id}/job_config.log"
+echo "${job_id}" > ./pbs/logs/last_job/job_id
