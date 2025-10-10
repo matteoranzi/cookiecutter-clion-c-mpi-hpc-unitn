@@ -4,12 +4,12 @@ WORKING_DIRECTORY="/home/{{ cookiecutter.unitn_username }}/{{ cookiecutter.remot
 cd "$WORKING_DIRECTORY" || exit
 
 
-source ./pbs/job.config
+source ./{{cookiecutter._hpc_executions_dir}}/job.config
 
 #---------------------------------------------------------------------------------------------------
 job_id="${PBS_JOBID%%.*}" # numeric job id
 
-job_log_path="pbs/logs/${job_id}"
+job_log_path="{{cookiecutter._hpc_executions_dir}}/logs/${job_id}"
 mkdir -p "./${job_log_path}"
 
 stdout_file="./${job_log_path}/out.log"

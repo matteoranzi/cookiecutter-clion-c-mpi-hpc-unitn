@@ -24,7 +24,7 @@
 ===========================================================
 */
 #define DEBUG_LEVEL DEBUG_LEVEL_INFO
-#include "../include/debug.h"
+#include "../{{cookiecutter._include_dir}}/debug.h"
 
 int main(void) {
     int comm_size;

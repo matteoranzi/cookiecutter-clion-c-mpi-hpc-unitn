@@ -3,8 +3,8 @@ project({{ cookiecutter.project_name }} C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable({{ cookiecutter.project_name }} src/main.c
-        include/debug.h)
+add_executable({{ cookiecutter.project_name }} {{cookiecutter._src_dir}}/main.c
+        {{cookiecutter._include_dir}}/debug.h)
 
 # Link against MPI
 find_package(MPI REQUIRED)

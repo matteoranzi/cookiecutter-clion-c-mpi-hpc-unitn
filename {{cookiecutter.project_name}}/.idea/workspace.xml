@@ -87,12 +87,12 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="local_run" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="{{ cookiecutter.project_name }}" TARGET_NAME="{{ cookiecutter.project_name }}" CONFIG_NAME="Debug-local" RUN_PATH="$PROJECT_DIR$/scripts/run/local_run.sh">
+    <configuration name="local_run" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="{{ cookiecutter.project_name }}" TARGET_NAME="{{ cookiecutter.project_name }}" CONFIG_NAME="Debug-local" RUN_PATH="$PROJECT_DIR$/{{cookiecutter._scripts_dir}}/run/local_run.sh">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="remote_run" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file:///home/{{ cookiecutter.unitn_username }}/{{ cookiecutter.remote_project_path }}/{{ cookiecutter.project_name }}/pbs" PASS_PARENT_ENVS_2="true" PROJECT_NAME="{{ cookiecutter.project_name }}" TARGET_NAME="{{ cookiecutter.project_name }}" CONFIG_NAME="Debug-remote" RUN_PATH="../scripts/run/remote_run.sh">
+    <configuration name="remote_run" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file:///home/{{ cookiecutter.unitn_username }}/{{ cookiecutter.remote_project_path }}/{{ cookiecutter.project_name }}/{{cookiecutter._hpc_executions_dir}}" PASS_PARENT_ENVS_2="true" PROJECT_NAME="{{ cookiecutter.project_name }}" TARGET_NAME="{{ cookiecutter.project_name }}" CONFIG_NAME="Debug-remote" RUN_PATH="../{{cookiecutter._scripts_dir}}/run/remote_run.sh">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
