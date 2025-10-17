@@ -1,8 +1,8 @@
-{% if cookiecutter.local_operating_system == "MacOS" %}
+{%- if cookiecutter.local_operating_system == "MacOS" -%}
 #!/bin/zsh
-{% endif %}
-{% if cookiecutter.local_operating_system == "Linux" %}
+{%- endif -%}
+{%- if cookiecutter.local_operating_system == "Linux" -%}
 #!/bin/bash
-{% endif %}
+{%- endif %}
 
-mpiexec -n 5 "$(dirname "$0")/../../cmake-build-debug-local/{{ cookiecutter.project_name }}"
+mpiexec -n 2 "$(dirname "$0")/../../cmake-build-debug-local/{{ cookiecutter.project_name }}"

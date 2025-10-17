@@ -5,7 +5,7 @@
     "local_operating_system": ["MacOS", "Linux", "Windows"],
     "cxx_standard": "11",
     "unitn_username": "matteo.ranzi",
-    "remote_project_path": ["/Exercises", "/Projects", "[WRITE_CUSTOM_PATH]"],
+    "remote_project_path": ["/Exercises", "/Projects", "/Benchmarks"],
     "remote_toolchain_name": "UNITN HPC",
 
     "_hpc_executions_dir": "HPC",
