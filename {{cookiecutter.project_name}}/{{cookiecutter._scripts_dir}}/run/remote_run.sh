@@ -11,4 +11,4 @@ echo "JOB_ID: ${job_id}"
 numeric_job_id="${job_id%%.*}"
 mkdir -p "./{{cookiecutter._hpc_executions_dir}}/logs/${numeric_job_id}"
 cp "./{{cookiecutter._hpc_executions_dir}}/job.config" "./{{cookiecutter._hpc_executions_dir}}/logs/${numeric_job_id}/job_config.log"
-echo "${job_id}" > ./{{cookiecutter._hpc_executions_dir}}/logs/last_job/job_id
+echo "${numeric_job_id}" > ./{{cookiecutter._hpc_executions_dir}}/logs/last_job/job_id
