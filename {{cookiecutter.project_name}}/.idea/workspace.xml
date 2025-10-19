@@ -26,8 +26,8 @@
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
-      <configuration PROFILE_NAME="Debug-local" ENABLED="true" CONFIG_NAME="Debug" />
-      <configuration PROFILE_NAME="Debug-remote" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="{{ cookiecutter.remote_toolchain_name }}" />
+      <configuration PROFILE_NAME="Debug-local" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DREMOTE_RUN=OFF" />
+      <configuration PROFILE_NAME="Debug-remote" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="{{ cookiecutter.remote_toolchain_name }}" GENERATION_OPTIONS="-DREMOTE_RUN=ON" />
     </configurations>
   </component>
   <component name="ChangeListManager">
